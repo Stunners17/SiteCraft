@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <header>
+        <h1>SITECRAFT</h1>  
+        <p><strong>(WEBSITE FOR LOCAL BUSINESSES)</strong><br></p> 
+    </header>
+    <section class="hero">
+        <p class="hero-text">
+            We build and manage professional website so customers can find you,contact you 
+            and order online with ease.
+        </p>
+        
+        <h2><strong>WHO IT'S FOR</strong><br></h2>
+        <ul>
+            <li><p2><strong>We Built For Local businesses</strong></p2></li>
+        </ul>
+        <p>Wheather you run a food business, Chlothing brand/store, Salon, Tatto studio, 
+           or Any small business - we help you get online professionally. </p>
+           <p>Our websites are designed to help you attract customers, showcase your products or services, and grow your business online.</p>
+           <p>We understand the unique challenges local businesses face, and our goal is to provide you with an affordable and effective online solution that works for you.</p>
+        <ul>
+            <li><strong>HOW IT WORKS</strong><br></li>
+        </ul>
+        <p><strong>(Getting Online Is Simple)</strong><br></p>
+        <ol>
+            <li>Choose A Package</li>
+            <p>Pick BASIC, STANDARD, or PREMIUM depending on your business needs.</p>
+            <li><strong>We Build You A Website</strong><br></li>
+            <p>You can send you details - we design and set everything up for you.</p>
+            <li><strong>Start Getting Customers</strong><br></li>
+            <p>Your website goeslive and customers can find you and place orders.</p>
+        </ol>
+
+
+
+            <p><strong>CHECK OUT OUR PACKAGES BELOW AND GET STARTED:</strong></p>
+
+    </section>
+    <main>
+
+    <div class="columns">
+      <div class="column" onclick="goToForm('basic')">
+        <h3>
+          BASIC
+        </h3>
+
+          <p>A professional online presence so customers can find and contact you.</p>
+          <p>FEATURES</p>
+          <ul>
+            <li>One page website</li>
+            <li>Contact information</li>
+            <li>Location and social media links</li>
+          </ul>
+          <p>Costumers can find your business online and contact you easily.</p>
+
+            <a href="form.html?package=basic" class="btn">R499.99</a>
+          
+      </div>
+
+        <div class="column" onclick="goToForm('standard')">
+            <h3>
+              STANDARD
+            </h3>
+            <p>Businesses that want to showcase products & services and let customers place simple orders</p>
+            <p>FEATURES</p>
+            <ul>
+                <li>Multi-page website(Home, About, Products, Menu, Contact).</li>
+                <li>Product catalog or menu listing.</li>
+                <li>Simple ordering form (Customers can fill a forr to order). </li>
+                <li>Social media links</li>
+            </ul>
+            <p>In this package customers can browse what you offer and place orders,but no full online payment system.</p>
+
+            <a href="form.html?package=standard" class="btn">R999.99</a>
+            
+        </div>
+
+        <div class="column" onclick="goToForm('premium')">
+            <h3>
+               PREMIUM
+            </h3>
+            <p>Bussinesses that want to sell online, take payments, and grow sales.</p>
+            <p>FEATURES</p>
+            <ul>
+                <li>Online payments</li>
+                <li>Delivery options</li>
+                <li>SEO optimazation</li>
+            </ul>
+            
+            <p>With this package customers can buy directly from your website, payments are automated and secure the business grows online.</p>
+
+            <a href="form.html?package=premium" class="btn">R1499.99</a>
+        </div>
+        
+    </div>
+
+
+    <script>
+        function goToForm(packageType){
+            //Redirect to form page and pass sellected package
+            window.location.href="form.html?package=" + packageType;
+
+        }
+    </script>
+
+    <style>
+        #home{
+           background:#0226b7 no-repeat center center fixed;
+           color: rgb(5, 4, 4);
+           padding: 10px 5px;
+           text-align: center;
+           letter-spacing: 3px;
+           width: 100%;
+        }
+        .columns{
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+        .column{
+            flex: 1;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            cursor:pointer;
+            transition: transformm 0.2s, box-shadow 0.2s;
+        }
+
+        .column h3{
+            margin-bottom: 10px;
+        }
+
+        .column ul{
+            list-style: none;
+            padding: 0;
+        }
+
+        .column ul li{
+            margin: 8px 0;
+        }
+
+        .column:hover{
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            background-color: #2c5364;
+            color: aliceblue;
+            border-radius: 10px;
+            border-color: #f9f9f9;
+        }
+
+        .column ul li strong{
+            color: black;
+        }
+
+    </style>
+
+    </main>
+
+    <div>
+        <footer>
+            <p> 
+                SiteCraft builds affordable website for SOUTH AFRICAN local 
+                businesses,helping them to selltake orders and grow online.
+            </p>
+            <p1>© 2026 SiteCraft. All rights reserved.</p1>
+            <p1>Have a question or want a website for your business?</p1>
+            <p1>Get in touch with us and lets build something that works for you.</p1>
+
+            <ul>
+                <li><strong>Contact Us</strong></li>
+                <li>Email: ntando.lawrance@gmail.com</li>
+                <li>Phone: 0769823253</li>
+            </ul>
+
+        </footer>
+    </div>
+
+    
+</body>
+</html>

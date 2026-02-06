@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Get Your Website | SiteCraft </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+
+    <div class="form-container">
+        <h2>Request a Website</h2>
+        <p class="subtitle">Tell us about your business and We’ll contact you shortly.</p>
+
+        <!--FORM START-->
+    <form 
+        id="website-request-form" 
+        action="https://formspree.io/f/xgolwqyg" 
+        method="POST" 
+        >
+
+        <!-- Subject for email notification -->
+       <input 
+        type="hidden" 
+        name="_subject" 
+        value="New Website Request - SiteCraft"
+       >
+
+       <input 
+        type="hidden" 
+        name="_redirect"
+        value="https://Stunners17.github.io/SiteCraft/thank-you.html"
+        >
+
+
+       <!--Spam protection-->
+       <input 
+        type="text" 
+        name="_gotcha" 
+        style="display:none"
+       >
+
+       <label>Business Name</label>
+       <input 
+        type="text" 
+        name="business name"
+        placeholder="business name" 
+        required
+       >
+
+       <label>Owner Names</label>
+       <input 
+        type="text" 
+        name="owner names"
+        placeholder="owner names" 
+        required
+       >
+
+       <label>Email Address</label>
+       <input 
+        type="email" 
+        name="email"
+        placeholder="name@email.com" 
+        required
+       >
+
+       <label>Phone / WhatsApp Number</label>
+       <input 
+        type="tel"
+        name="phone"
+        placeholder="e.g. 071 234 5678" 
+        required
+       >
+
+
+       <label>Select Package</label>
+       <select name="package" id="package" required>
+         <option value="">-- Choose a package --</option>
+         <option value="Basic">Basic</option>
+         <option value="Standard">Standard</option>
+         <option value="Premium">Premium</option>
+       </select>
+
+       <label>Tell us about your business</label>
+       <textarea 
+        name="business details" 
+        rows="4"
+        placeholder="What do you sell? Do you want orders, delivery, or just information?">
+       </textarea>
+
+        <button type="submit">Submit Request</button>
+    </form>
+
+     <p class="note">
+       We’ll contact you after reviewing your request.
+     </p>
+    
+    </div>
+
+
+  <!-- Auto-select package from previous page -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const selectedPackage = params.get("package");
+
+    if (selectedPackage) {
+      document.getElementById("package").value =
+        selectedPackage.charAt(0).toUpperCase() + selectedPackage.slice(1);
+    }
+  </script>
+
+    </body>
+</html>

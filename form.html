@@ -11,87 +11,49 @@
     <body>
 
     <div class="form-container">
-        <h2>Request a Website</h2>
-        <p class="subtitle">Tell us about your business and We’ll contact you shortly.</p>
+      <h2>Request a Website</h2>
+      <p class="subtitle">Tell us about your business and we’ll contact you shortly with a tailored proposal.</p>
 
-        <!--FORM START-->
-    <form 
-        id="website-request-form" 
-        action="https://formspree.io/f/xgolwqyg" 
-        method="POST" 
-        >
+      <form
+        id="website-request-form"
+        action="https://formspree.io/f/xgolwqyg"
+        method="POST"
+      >
+        <input type="hidden" name="_subject" value="New Website Request - SiteCraft">
+        <input type="text" name="_gotcha" style="display:none">
 
-        <!-- Subject for email notification -->
-       <input 
-        type="hidden" 
-        name="_subject" 
-        value="New Website Request - SiteCraft"
-       >
+        <label for="business-name">Business Name</label>
+        <input id="business-name" type="text" name="business name" placeholder="Business name" required>
 
+        <label for="owner-names">Owner Names</label>
+        <input id="owner-names" type="text" name="owner names" placeholder="Owner names" required>
 
+        <label for="email">Email Address</label>
+        <input id="email" type="email" name="email" placeholder="name@email.com" required>
 
-       <!--Spam protection-->
-       <input 
-        type="text" 
-        name="_gotcha" 
-        style="display:none"
-       >
+        <label for="phone">Phone / WhatsApp Number</label>
+        <input id="phone" type="tel" name="phone" placeholder="e.g. 071 234 5678" required>
 
-       <label>Business Name</label>
-       <input 
-        type="text" 
-        name="business name"
-        placeholder="business name" 
-        required
-       >
+        <label for="package">Select Package</label>
+        <select id="package" name="package" required>
+          <option value="">-- Choose a package --</option>
+          <option value="Basic">Basic</option>
+          <option value="Standard">Standard</option>
+          <option value="Premium">Premium</option>
+        </select>
 
-       <label>Owner Names</label>
-       <input 
-        type="text" 
-        name="owner names"
-        placeholder="owner names" 
-        required
-       >
+        <label for="business-details">Tell us about your business</label>
+        <textarea
+          id="business-details"
+          name="business details"
+          rows="5"
+          placeholder="What do you sell? Do you want orders, delivery, or just information?"
+        ></textarea>
 
-       <label>Email Address</label>
-       <input 
-        type="email" 
-        name="email"
-        placeholder="name@email.com" 
-        required
-       >
+        <button type="submit" class="button button-primary">Submit Request</button>
+      </form>
 
-       <label>Phone / WhatsApp Number</label>
-       <input 
-        type="tel"
-        name="phone"
-        placeholder="e.g. 071 234 5678" 
-        required
-       >
-
-
-       <label>Select Package</label>
-       <select name="package" id="package" required>
-         <option value="">-- Choose a package --</option>
-         <option value="Basic">Basic</option>
-         <option value="Standard">Standard</option>
-         <option value="Premium">Premium</option>
-       </select>
-
-       <label>Tell us about your business</label>
-       <textarea 
-        name="business details" 
-        rows="4"
-        placeholder="What do you sell? Do you want orders, delivery, or just information?">
-       </textarea>
-
-        <a href="thank-you.html" onclick="document.getElementById('website-request-form').submit();" class="btn">Submit Request</a>
-    </form>
-
-     <p class="note">
-       We’ll contact you after reviewing your request.
-     </p>
-    
+      <p class="note">We’ll contact you after reviewing your request.</p>
     </div>
 
 
